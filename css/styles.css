@@ -808,7 +808,8 @@ pre code {
   margin-left: 91.6666666667%;
 }
 
-@media (min-width: 576px) {
+/*@media (min-width: 576px) {*/
+@media (min-width: 384px) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -1019,7 +1020,8 @@ pre code {
     margin-left: 91.6666666667%;
   }
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {*/
+@media (min-width: 384px) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -9957,6 +9959,10 @@ h3 {
     min-width: 992px !important;
   }
 
+  .container2{
+    min-width: 200px !important;
+  }
+
   .navbar {
     display: none;
   }
@@ -10046,6 +10052,10 @@ hr.light2 {
   padding: 8rem 0;
 }
 
+.page-section2{
+  padding: 2rem 0;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -10114,7 +10124,7 @@ hr.light2 {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-main.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-main-resize.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

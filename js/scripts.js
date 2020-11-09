@@ -60,4 +60,56 @@
     }
   });
 
+  $('.phone').keydown(function(event) {
+    var key = event.charCode || event.keyCode || 0;
+    var $text = $(this);
+    if (key !== 8 && key !== 9) {
+        if ($text.val().length === 3) {
+            $text.val($text.val() + '-');
+        }
+        if ($text.val().length === 8) {
+            $text.val($text.val() + '-');
+        }
+    }
+ 
+    return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));          
+  });
+
+  $('#RSVP_send').click(function(e){
+    e.preventDefault();
+    $('#RSVP_form').submit();
+  });
+
+  $('#RSVP_form').submit(function(e){
+    e.preventDefault();
+    var url="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeXRcUiGtS9EwZ4tYDfVw7DDwzY0okhKBbbNGllT5uJWsvmaA/formResponse";
+    if($('.name').val()=='' || $('.phone').val() ==''){
+      alert('빈칸이 존재합니다.');
+      return false;
+    }
+    $.ajax({
+      url:url,
+      data:$('#RSVP_form').serialize(),
+      type:'POST',
+      statusCode:{
+        0: function(data){
+          alert('참여해주셔서 감사합니다.');
+          $('.name').val('');
+          $('.phone').val('');
+          $('.attend option:eq(0)').prop('selected',true);
+          $('.plus option:eq(0)').prop('selected',true);
+        },
+        200: function(data){
+          alert('참여해주셔서 감사합니다.');
+          $('.name').val('');
+          $('.phone').val('');
+          $('.attend option:eq(0)').prop('selected',true);
+          $('.plus option:eq(0)').prop('selected',true);
+        },
+        403: function(data){
+          alert('전송이 실패하였습니다.');
+        }
+      }
+    });
+  });
 })(jQuery); // End of use strict
