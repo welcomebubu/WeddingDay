@@ -809,7 +809,7 @@ pre code {
 }
 
 /*@media (min-width: 576px) {*/
-@media (min-width: 384px) {
+@media (min-width: 320px) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -10041,6 +10041,15 @@ hr.light2 {
 
 .btn-xl {
   padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
+.btn-xl2 {
+  padding: 1rem 1.5rem;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
