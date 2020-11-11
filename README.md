@@ -1,2 +1,4 @@
-# 손수 만드는 모바일 청첩장 PROJECT
-![wedding](https://img.shields.io/badge/Wedding-2020.02.20-red)
+# 이상현과 장미나의 모바일청첩장
+![wedding](https://img.shields.io/badge/Wedding%20Data-2020.02.20-red)
+
+##
