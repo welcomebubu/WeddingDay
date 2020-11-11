@@ -6,11 +6,11 @@
 ##예식정보
 + 일시 : 2021년 2월 20일(토) 12시
 + 장소 : 코엑스 그래머시 2층 아셈볼룸
-+ 청첩장 : ![이곳을 통해 이동](https://sh4n3e.github.io/wedding)
++ 청첩장 : [이곳을 통해 이동](https://sh4n3e.github.io/wedding)
 
 ## 템플릿
 bootstrap creative template 이용
-![Start Bootstrap Creative URL](https://startbootstrap.com/theme/creative)
+[Start Bootstrap Creative URL](https://startbootstrap.com/theme/creative)
 
 ## 페이지 구조
 페이지를 아래와 같이 구성
