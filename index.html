@@ -251,6 +251,15 @@
                                 <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="tmapGo('%EC%BD%94%EC%97%91%EC%8A%A4+%EB%B6%81%EB%AC%B8%EC%A3%BC%EC%B0%A8%EC%9E%A5%28%EC%95%84%EC%85%88%ED%83%80%EC%9B%8C%2F%EB%B4%89%EC%9D%80%EC%82%AC%EB%B0%A9%ED%96%A5%29','%EC%84%9C%EC%9A%B8+%EA%B0%95%EB%82%A8%EA%B5%AC+%EC%82%BC%EC%84%B1%EB%8F%99+159','4574209','1350388','127.05925420990916','37.51358175886597','187757')">코엑스 북문 Gate</a>
                             </div>
                         </div>
+                        <h5 class="font-weight-bold text-dark mb-4">Kakao Navi 바로가기</h5>
+                        <div class="row">
+                            <div class="col" style="margin-right:-10%">
+                                <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="Kakao.Navi.share({name: '코엑스 동문 Gate',x: 127.06072632771028,y: 37.51066543828263,coordType: 'wgs84',})">코엑스 동문 Gate</a>
+                            </div>
+                            <div class="col" style="margin-left:-10%">
+                                <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="Kakao.Navi.share({name: '코엑스 동문 Gate',x: 127.05925420990916,y: 37.51358175886597,coordType: 'wgs84',})">코엑스 북문 Gate</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -341,25 +350,31 @@
         <a id="navi" href="#" onclick="navi();">
 			<img src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/>
         </a>
-        <!-- key : 16740d1870b2cfdda5c53f4b72c21f05 -->
-        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-        <script type="text/javascript">
-            Kakao.init('16740d1870b2cfdda5c53f4b72c21f05');
-            Kakao.isInitialized();    
-            function navi() {
-                Kakao.Navi.start({
-                name: '현대백화점',
-                x: 127.11205203011632,
-                y: 37.39279717586919,
-                coordType: 'wgs84',
-                })
-            }
-		</script>
+        
+        
          <!-- Footer-->
          <footer class="bg-light py-5">
             <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
             <div class="container"><div class="small text-center text-muted">Coded by sh4n3e</div></div>
         </footer>
+
+        <!--For Kakao map script-->
+        <!-- key : 16740d1870b2cfdda5c53f4b72c21f05 -->
+        <script type="text/javascript">
+            Kakao.init('16740d1870b2cfdda5c53f4b72c21f05');
+            Kakao.isInitialized();    
+            function navi1() {
+                Kakao.Navi.share({name: '코엑스 동문 Gate',x: 127.06096992276437,y: 37.511024971820156,coordType: 'wgs84',})
+            }
+            function navi1() {
+                Kakao.Navi.share({
+                    name: '코엑스 북문 Gate',
+                    x: 127.05892756486813,
+                    y: 37.51361639519682,
+                    coordType: 'wgs84',
+                })
+            }
+		</script>
 
         <!-- For JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -369,6 +384,8 @@
         <script src="js/scripts.js"></script>
         <!--For TMap-->
         <script src="https://poi.tmap.co.kr/common/js/shareCommon/shareWeb2AppCommon-1.0.js?version=1.4&c=20202209"></script>
+        <!--For KAKAO-->
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     </body>
 </html>
 
