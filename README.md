@@ -9,7 +9,7 @@
 + 청첩장 : [이곳을 통해 이동](https://sh4n3e.github.io/wedding)
 
 ## 템플릿
-bootstrap creative template 이용
+bootstrap creative template 이용  
 [Start Bootstrap Creative URL](https://startbootstrap.com/theme/creative)
 
 ## 페이지 구조
