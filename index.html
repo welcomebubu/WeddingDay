@@ -340,8 +340,12 @@
         </section>
         <a id="navi" href="#" onclick="navi();">
 			<img src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/>
-		</a>
-		<script type="text/javascript">
+        </a>
+        <!-- key : 16740d1870b2cfdda5c53f4b72c21f05 -->
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script type="text/javascript">
+            Kakao.init('16740d1870b2cfdda5c53f4b72c21f05');
+            Kakao.isInitialized();    
             function navi() {
                 Kakao.Navi.start({
                 name: '현대백화점',
