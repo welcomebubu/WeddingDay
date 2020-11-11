@@ -330,7 +330,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <p class="font-weight-bold text-dark mb-0" style="display:inline;">축하해주신 만큼 잘 살겠습니다.&nbsp;&nbsp;</p>
-                        <img src="assets/img/icon/love.png" style="display:inline;" width=30 height=30>
+                        <a id="sendLink" href="#" onclick="sendLink()">
+                            <img src="assets/img/icon/love.png" style="display:inline;" width=30 height=30>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -339,7 +341,7 @@
          <!-- Footer-->
          <footer class="bg-light py-5">
             <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
-            <div class="container"><div class="small text-center text-muted">Coded by sh4n3e</div></div>
+            <div class="container"><div class="small text-center text-muted">Coded by sh4n3e...</div></div>
         </footer>
 
         <!-- For JS-->
@@ -356,7 +358,12 @@
         <!-- key : 16740d1870b2cfdda5c53f4b72c21f05 -->
         <script type="text/javascript">
             Kakao.init('16740d1870b2cfdda5c53f4b72c21f05');
-            Kakao.isInitialized();    
+            Kakao.isInitialized();
+            function sendLink(){
+				Kakao.Link.sendCustom({
+					templateId: 40370
+				});
+			}
 		</script>
     </body>
 </html>
