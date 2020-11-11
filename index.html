@@ -254,10 +254,10 @@
                         <h5 class="font-weight-bold text-dark mb-4">Kakao Navi 바로가기</h5>
                         <div class="row">
                             <div class="col" style="margin-right:-10%">
-                                <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="Kakao.Navi.share({name: '코엑스 동문 Gate',x: 127.06072632771028,y: 37.51066543828263,coordType: 'wgs84',})">코엑스 동문 Gate</a>
+                                <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="Kakao.Navi.share({name: '코엑스 동문 Gate', x: 127.06072632771028, y: 37.51066543828263, coordType: 'wgs84'})">코엑스 동문 Gate</a>
                             </div>
                             <div class="col" style="margin-left:-10%">
-                                <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="Kakao.Navi.share({name: '코엑스 동문 Gate',x: 127.05925420990916,y: 37.51358175886597,coordType: 'wgs84',})">코엑스 북문 Gate</a>
+                                <a class="btn btn-light btn-xl2 js-scroll-trigger" href="javascript:;" onclick="Kakao.Navi.share({name: '코엑스 동문 Gate',x: 127.05925420990916,y: 37.51358175886597,coordType: 'wgs84'})">코엑스 북문 Gate</a>
                             </div>
                         </div>
                     </div>
@@ -346,7 +346,7 @@
                     </div>
                 </div>
             </div>
-        </section>     
+        </section>
         
          <!-- Footer-->
          <footer class="bg-light py-5">
@@ -359,6 +359,22 @@
         <script type="text/javascript">
             Kakao.init('16740d1870b2cfdda5c53f4b72c21f05');
             Kakao.isInitialized();    
+            function navi1() {
+                Kakao.Navi.share({
+                    name: '코엑스 동문 Gate',
+                    x: 127.06072632771028,
+                    y: 37.51066543828263,
+                    coordType: 'wgs84'
+                })
+            }
+            function navi1() {
+                Kakao.Navi.share({
+                    name: '코엑스 북문 Gate',
+                    x: 127.05925420990916,
+                    y: 37.51358175886597,
+                    coordType: 'wgs84'
+                })
+            }
 		</script>
 
         <!-- For JS-->
