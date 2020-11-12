@@ -208,7 +208,8 @@
                         <hr class="divider3 my-4" />
                         <p class="text-dark font-weight-bold mb-3">[코엑스 그래머시 2층 아셈볼룸]</p>
                         <div>
-                            <img class="img-fluid mb-3" src="assets/img/map/map.png" alt=""/>
+                            <img class="img-fluid mb-3" src="assets/img/map/map.png" id="mapimg" alt=""/>
+                            <img style="position: absolute;" class="img-fluid mb-3" id="man" src="assets/img/map/man.png" alt="" height=40 width=40 href="javascript:;" onclick="run()"/>
                         </div>
                         <div class="text-dark mb-0">
                             <div>
@@ -346,6 +347,32 @@
 
         <!-- For JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //console.log('load');
+                run();
+                $(window).resize(function(){
+                    console.log($('#mapimg').width(), $('#mapimg').height());
+                    var map_width = $('#mapimg').width();
+                    var map_height = $('#mapimg').height();
+                    $('#man').height(map_width*0.098);
+                    $('#man').width(map_width*0.098);
+                    $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63})
+                });
+            });
+            setInterval(function(){run();},3600);
+            function run(){
+                var map_width = $('#mapimg').width();
+                var map_height = $('#mapimg').height();
+                $('#man').height(map_width*0.098);
+                $('#man').width(map_width*0.098);
+                var size = $('#man').height();
+                console.log(map_width, map_height);
+                $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
+                $('#man').animate({left:"+=".concat((size*4.1).toString())},2000,'linear').animate({top:"-=".concat((size*0.9).toString())},500,'linear').animate({left:"+=".concat((size*1.7).toString())},1000,'linear');
+                $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
