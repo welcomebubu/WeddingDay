@@ -194,6 +194,34 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="assets/img/gallery/fullsize/img_15.jpg">
+                                <img class="img-fluid" src="assets/img/gallery/thumbnail/thumb_15.jpg" alt="" />
+                                <div class="portfolio-box-caption p-3">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="assets/img/gallery/fullsize/img_16.jpg">
+                                <img class="img-fluid" src="assets/img/gallery/thumbnail/thumb_16.jpg" alt="" />
+                                <div class="portfolio-box-caption p-3">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="assets/img/gallery/fullsize/img_17.jpg">
+                                <img class="img-fluid" src="assets/img/gallery/thumbnail/thumb_17.jpg" alt="" />
+                                <div class="portfolio-box-caption p-3">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="assets/img/gallery/fullsize/img_18.jpg">
+                                <img class="img-fluid" src="assets/img/gallery/thumbnail/thumb_18.jpg" alt="" />
+                                <div class="portfolio-box-caption p-3">
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -358,9 +386,15 @@
                     $('#man').height(map_width*0.098);
                     $('#man').width(map_width*0.098);
                     $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63})
+                    run()
                 });
             });
-            setInterval(function(){run();},4000);
+            
+            setInterval(function(){
+                $('#man').clearQueue();
+                $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
+                run();
+            },8000);
             function run(){
                 var map_width = $('#mapimg').width();
                 var map_height = $('#mapimg').height();
@@ -370,7 +404,8 @@
                 console.log(map_width, map_height);
                 $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
                 $('#man').animate({left:"+=".concat((size*4.1).toString())},2000,'linear').animate({top:"-=".concat((size*0.9).toString())},500,'linear').animate({left:"+=".concat((size*1.7).toString())},1000,'linear');
-                $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
+                $('#man').animate({left:"-=".concat((size*1.7).toString())},1000,'linear').animate({top:"+=".concat((size*0.9).toString())},500,'linear').animate({left:"-=".concat((size*4.1).toString())},2000,'linear');
+                //$('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
             }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
