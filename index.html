@@ -237,7 +237,7 @@
                         <p class="text-dark font-weight-bold mb-3">[코엑스 그래머시 2층 아셈볼룸]</p>
                         <div>
                             <img class="img-fluid mb-3" src="assets/img/map/map.png" id="mapimg" alt=""/>
-                            <img style="position: absolute;" class="img-fluid mb-3" id="man" src="assets/img/map/man.png" alt="" height=40 width=40 href="javascript:;" onclick="run()"/>
+                            <img style="position: absolute;" class="img-fluid mb-3" id="man" src="assets/img/map/man.png" alt="" height=40 width=40/>
                         </div>
                         <div class="text-dark mb-0">
                             <div>
@@ -380,32 +380,33 @@
                 //console.log('load');
                 run();
                 $(window).resize(function(){
-                    console.log($('#mapimg').width(), $('#mapimg').height());
+                    //console.log($('#mapimg').width(), $('#mapimg').height());
+                    //console.log($('#man').queue())
+                    //$('#man').stop(clearQueue);
                     var map_width = $('#mapimg').width();
                     var map_height = $('#mapimg').height();
                     $('#man').height(map_width*0.098);
                     $('#man').width(map_width*0.098);
-                    $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63})
-                    run()
+                    //$('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
+                    //run();
                 });
             });
-            
-            setInterval(function(){
+            /*setInterval(function(){
                 $('#man').clearQueue();
                 $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
                 run();
-            },8000);
+            },8000);*/
+
             function run(){
                 var map_width = $('#mapimg').width();
                 var map_height = $('#mapimg').height();
                 $('#man').height(map_width*0.098);
                 $('#man').width(map_width*0.098);
                 var size = $('#man').height();
-                console.log(map_width, map_height);
+                //console.log(map_width, map_height);
                 $('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
-                $('#man').animate({left:"+=".concat((size*4.1).toString())},2000,'linear').animate({top:"-=".concat((size*0.9).toString())},500,'linear').animate({left:"+=".concat((size*1.7).toString())},1000,'linear');
-                $('#man').animate({left:"-=".concat((size*1.7).toString())},1000,'linear').animate({top:"+=".concat((size*0.9).toString())},500,'linear').animate({left:"-=".concat((size*4.1).toString())},2000,'linear');
-                //$('#man').offset({left:$('#mapimg').offset().left+$('#mapimg').width()*0.12, top:$('#mapimg').offset().top+$('#mapimg').height()*0.63});
+                $('#man').animate({left:"+=".concat((size*4.1).toString())},2000,'linear').animate({top:"-=".concat((size*0.9).toString())},500,'linear').animate({left:"+=".concat((size*1.7).toString())},1000,'linear',function(){run();});
+                //$('#man').animate({left:"-=".concat((size*1.7).toString())},1000,'linear').animate({top:"+=".concat((size*0.9).toString())},500,'linear').animate({left:"-=".concat((size*4.1).toString())},2000,'linear');
             }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
