@@ -1,5 +1,5 @@
 # 이상현과 장미나의 모바일 청첩장
-![wedding](https://img.shields.io/badge/Wedding%20Data-2020.02.20-red)
+![wedding](https://img.shields.io/badge/Wedding%20Data-2021.02.20-red)
 
 ![pic](https://sh4n3e.github.io/wedding/assets/img/bg-main-resize.jpg)
 
