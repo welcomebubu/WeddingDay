@@ -5,7 +5,7 @@
 ## 예식정보
 + 일시 : 2023년 3월 11일(토) 11시30분
 + 장소 : 오륜교회 1층 그레이스홀
-+ 청첩장 : [이곳을 통해 이동](https://sh4n3e.github.io/wedding)
++ 청첩장 : [이곳을 통해 이동](https://sh4n3e.github.io/wedding](https://afcaptainy.github.io/weddingInvitation)
 
 ## 템플릿
 bootstrap creative template 이용  
