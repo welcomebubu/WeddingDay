@@ -1,6 +1,6 @@
 # 유지환과 이신영의 모바일 청첩장
 
-![pic](https://sh4n3e.github.io/wedding/assets/img/IMG_0768.jpg)
+![pic](https://afcaptainy.github.io/weddingInvitation/assets/img/IMG_0768.JPG)
 
 ## 예식정보
 + 일시 : 2023년 3월 11일(토) 11시30분
