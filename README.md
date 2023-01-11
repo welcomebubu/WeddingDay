@@ -1,11 +1,11 @@
 # 유지환과 이신영의 모바일 청첩장
 
-![pic](https://afcaptainy.github.io/weddingInvitation/assets/img/IMG_0768.JPG)
+![pic](https://welcomebubu.github.io/WeddingDay/assets/img/IMG_0768.JPG)
 
 ## 예식정보
 + 일시 : 2023년 3월 11일(토) 11시30분
 + 장소 : 오륜교회 1층 그레이스홀
-+ 청첩장 : [이곳을 통해 이동](https://afcaptainy.github.io/weddingInvitation)
++ 청첩장 : [이곳을 통해 이동](https://welcomebubu.github.io/WeddingDay)
 
 ## 템플릿
 bootstrap creative template 이용  
